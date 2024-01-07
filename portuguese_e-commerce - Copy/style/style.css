@@ -1,0 +1,297 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+ 
+}
+/* NAV HEADER */
+.header{
+   font-family: 'Poppins';
+   font-size: 30px;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 10px;
+   background-color: rgba(247, 208, 204, 0.827);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 100;
+   position: absolute;
+}
+
+.Nav{
+   overflow: hidden;
+   float: left;
+}
+.Nav a{
+   color: rgb(241, 63, 43);
+   text-decoration: none;
+   font-weight: 600;
+}
+
+.navRight{
+   float: right;
+}
+.navRight a{
+   font-size: 20px;
+   color: #ededed;
+   text-decoration: none;
+   font-weight: 500;
+   margin-left: 15px;
+}
+
+.Nav a:hover{
+   color: salmon;
+}
+
+
+/*            HOMEPAGE                */
+.home{
+  background: url('../assets/images/pillowdream.jpg') center center no-repeat;
+  background-size: 150% 150%;
+  background-position: contain;
+  height: 100vh;
+}
+
+.home p{
+  padding-top: 10%;
+  text-align: center;
+  animation: 0.9s anim-home ease-out; 
+  color:white;
+  font-size: 80px;
+}
+
+@keyframes anim-home{
+  0% {
+    opacity: 0;
+    transform: translateY(80%);
+  }
+  20% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.home i{
+  color: rgb(240, 94, 78);
+  font-size: 100px;  
+}
+
+/*            LOG IN                   */
+.log-sign{
+  background-image: url(../assets/images/pillowdream.jpg);
+  background-size: 150% 150%;
+  background-position: contain;
+  height: 100vh;
+  padding-top: 10%;
+  font-family: 'Poppins';
+}
+.logpage{
+  width: 382px;
+  overflow: hidden;
+  margin: auto;
+  margin: 10 0 0 300px;
+  padding: 70px;
+  background: rgba(230, 95, 80, 0.36);
+  border-radius: 15px ;
+  border-top: 60;
+}
+.logpage h2{
+text-align: center;
+color: #277582;
+padding: 20px;
+}
+label{
+color: black;
+font-size: 17px;
+}
+#Uname{
+width: 250px;
+height: 30px;
+border: none;
+border-radius: 3px;
+padding-left: 8px;
+}
+
+#Pass{
+width: 250px;
+height: 30px;
+border: none;
+border-radius: 3px;
+padding-left: 8px;
+}
+
+#log{
+width: 250px;
+height: 30px;
+border: none;
+border-radius: 17px;
+padding-left: 5px;
+color: black;
+font-size: 15px;
+background-color: rgb(235, 176, 169);
+}
+
+.logpage a{
+text-align: center;
+}
+
+#login input{
+  cursor: pointer;
+}
+
+#login input:hover{
+  background-color: salmon;
+}
+
+.signup{
+  margin-left:37%;
+  text-decoration: none;
+  color: rgb(241, 63, 43);
+  font-size: 18px; 
+}
+
+/*            PRODUCTS                */
+
+.products{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  background: rgb(193, 119, 110);
+  padding-top: 5%;
+}
+
+.container{
+  position: relative;
+  width: 1200px;
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding: 20px;
+  
+}
+
+.container .card{
+  width: 100%;
+  background: white;
+  cursor: pointer;
+}
+
+.container .card .prodBox{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+.container .card .prodBox img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+  transform-origin: bottom;
+}
+
+.container .card:hover .prodBox img{
+transform: scale(1.5);
+}
+
+.action{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+}
+.action li{
+  position: relative;
+  list-style: none;
+  height: 40px;
+  width: 40px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  cursor: pointer;
+}
+
+.action li:hover{
+  background-color: #ff2020;
+  color: white;
+}
+.action li span{
+  position: absolute;
+  right: 10px;
+  top: 55px;
+  transform: translateY(-50px);
+  white-space: nowrap;
+  padding: 4px 60px;
+  background: white;
+  color: #333;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 4px;
+  pointer-events:none;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.action li:hover span{
+  transform: translateY(-50px) translateX(-50px);
+  opacity: 1;
+  color: red;
+}
+.action li span:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  transform: translateY(-50px) rotate(45deg);
+}
+
+.container .card .content{
+  padding: 5px;
+}
+
+.container .card .content .prodName h3{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin: 10px 0;
+
+}
+
+.container .card .content .price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container .card .content .price{
+  font-size: 20px;
+  color: #ff2020;
+  font-weight: 500;
+}
+
+.rating i{
+  color: yellow;
+  font-size: 18px;
+}
+
+.container img{
+  height: 100;
+}
